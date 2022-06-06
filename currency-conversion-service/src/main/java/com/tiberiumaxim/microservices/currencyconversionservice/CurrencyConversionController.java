@@ -32,6 +32,7 @@ public class CurrencyConversionController {
         assert currencyConversion != null;
         currencyConversion.setTotalCalculatedAmount(quantity.multiply(currencyConversion.getConversionMultiple()));
         currencyConversion.setEnvironment(currencyConversion.getEnvironment() + " rest_template");
+        currencyConversion.setQuantity(quantity);
         return currencyConversion;
     }
 
@@ -44,6 +45,7 @@ public class CurrencyConversionController {
         assert currencyConversion != null;
         currencyConversion.setTotalCalculatedAmount(quantity.multiply(currencyConversion.getConversionMultiple()));
         currencyConversion.setEnvironment(currencyConversion.getEnvironment() + " feign");
+        currencyConversion.setQuantity(quantity);
         return currencyConversion;
     }
 }
